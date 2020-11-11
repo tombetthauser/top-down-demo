@@ -5,4 +5,5 @@
   position: absolute;
   left: 150px;
   top: 150px;
+  transition: .2s;
 }
