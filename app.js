@@ -6,7 +6,7 @@ document.addEventListener("keydown", e => {
   e = e || window.event;
 
   if (e.keyCode == '38') {
-    console.log("up arrow");
+    moveUp(square);
   }
   else if (e.keyCode == '40') {
     console.log("down arrow");
@@ -42,8 +42,8 @@ function moveUp(node) {
   currTop = currTop.slice(0, currTop.length - 2)
   
   let newTop = Number(currTop) - 25;
-  node.style.left = newTop + "px";
-  console.log(node.style.left);
+  node.style.top = newTop + "px";
+  console.log(node.style.top);
 }
 
 // On key up and down call function. There are different codes for each key.
