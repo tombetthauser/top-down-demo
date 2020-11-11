@@ -15,7 +15,7 @@ document.addEventListener("keydown", e => {
     moveLeft(square);
   }
   else if (e.keyCode == '39') {
-    console.log("right arrow");
+    moveRight(square);
   }
 });
 
@@ -23,9 +23,27 @@ function moveLeft(node) {
   let currLeft = node.style.left;
   currLeft = currLeft.slice(0, currLeft.length - 2)
   
-  let newLeft = currLeft - 5;
+  let newLeft = Number(currLeft) - 25;
   node.style.left = newLeft + "px";
-  console.log(currLeft);
+  console.log(node.style.left);
+}
+
+function moveRight(node) {
+  let currLeft = node.style.left;
+  currLeft = currLeft.slice(0, currLeft.length - 2)
+  
+  let newLeft = Number(currLeft) + 25;
+  node.style.left = newLeft + "px";
+  console.log(node.style.left);
+}
+
+function moveUp(node) {
+  let currTop = node.style.top;
+  currTop = currTop.slice(0, currTop.length - 2)
+  
+  let newTop = Number(currTop) - 25;
+  node.style.left = newTop + "px";
+  console.log(node.style.left);
 }
 
 // On key up and down call function. There are different codes for each key.
